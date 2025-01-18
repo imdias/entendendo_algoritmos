@@ -4,7 +4,7 @@ def pesquisa_binaria(lista, item):
 
     while baixo <= alto:
         meio = (baixo + alto) / 2
-        chute = lista[meio]
+        chute = lista(meio)
         if chute == item:
             return meio
         if chute > item:
@@ -12,3 +12,7 @@ def pesquisa_binaria(lista, item):
         else:
             baixo = meio + 1
     return None
+
+minha_lista = [1, 3, 5, 7, 9]
+
+print ("Valor retornado da lista binária: ", pesquisa_binaria(minha_lista, 3))
